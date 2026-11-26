@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Megoo NFC 工具 隐私政策</title>
+<style>
+  :root { --ink:#1a1a1a; --soft:#5b6472; --line:#e6e8ec; --brand:#4f46e5; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#f7f8fa; color:var(--ink);
+         font:16px/1.75 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:48px 20px 80px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:36px 32px; }
+  h1 { font-size:26px; margin:0 0 6px; letter-spacing:-.3px; }
+  .meta { color:var(--soft); font-size:14px; margin-bottom:28px; }
+  h2 { font-size:18px; margin:34px 0 10px; padding-top:18px; border-top:1px solid var(--line); }
+  h2:first-of-type { border-top:0; padding-top:0; }
+  p, li { color:#2b3038; }
+  ul { padding-left:22px; }
+  li { margin:6px 0; }
+  table { width:100%; border-collapse:collapse; margin:12px 0; font-size:15px; }
+  th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+  th { background:#fafbfc; font-weight:600; }
+  code { background:#f2f3f5; padding:1px 6px; border-radius:5px; font-size:14px; }
+  .hl { background:#f5f3ff; border-left:3px solid var(--brand); padding:12px 16px; border-radius:0 8px 8px 0; margin:16px 0; }
+  footer { color:var(--soft); font-size:13px; margin-top:36px; text-align:center; }
+</style>
+</head>
+<body>
+<main>
+<div class="card">
+  <h1>Megoo NFC 工具 隐私政策</h1>
+  <div class="meta">生效日期：2026 年 11 月 26 日　|　更新日期：2026 年 11 月 26 日　|　版本：v1.0</div>
+
+  <div class="hl">
+    一句话说明：本应用不注册账号、不收集个人信息、不联网上传任何数据。NFC 标签内容与读写记录只保存在你的手机本地。
+  </div>
+
+  <h2>一、我们是谁</h2>
+  <p>Megoo NFC 工具（Android 包名：<code>com.megoo.nfc_card_tool</code>，以下简称"本应用"）由【改：填你的姓名或公司名】（以下简称"我们"）开发和运营。</p>
+  <p>本政策说明本应用如何处理与你有关的信息。使用本应用即表示你已阅读并同意本政策。</p>
+
+  <h2>二、本应用收集哪些信息</h2>
+  <p><strong>我们不收集任何个人信息。</strong>具体而言：</p>
+  <ul>
+    <li>不要求注册、不要求登录，不收集手机号、邮箱、姓名、身份证号。</li>
+    <li>不收集设备标识符（IMEI、OAID、Android ID）、不收集位置、不读取通讯录、短信、相册、麦克风、相机。</li>
+    <li>不集成任何第三方统计、广告、推送、崩溃上报 SDK。</li>
+    <li>读卡、写卡、复制、擦除等核心功能全部在本机离线完成；仅“应用内购买”由华为支付 SDK 联网校验订单，我们自身不发起、不接收任何网络数据。</li>
+  </ul>
+
+  <h2>三、NFC 标签数据的处理</h2>
+  <p>本应用的全部功能都围绕你主动贴近手机的 NFC 标签展开：</p>
+  <ul>
+    <li>读取标签的 UID、存储容量、是否可写，以及标签内已有的记录（文本、网址、名片、电话、短信、邮件、WiFi）。</li>
+    <li>按你的操作向标签写入、复制或擦除上述内容。</li>
+    <li>以上数据仅在手机内存中处理，用于界面展示和写入目标标签，<strong>不会上传到任何服务器，也不会发送给任何第三方</strong>。</li>
+  </ul>
+  <p>本应用不读取、不解析、不复制加密卡、门禁卡、银行卡、身份证、公交卡等非标准 NDEF 标签。</p>
+
+  <h2>四、本地存储</h2>
+  <p>为方便你查看历史操作，本应用会在手机本地保存最近 100 条读写记录（标签 UID、内容类型、操作时间）。这些数据：</p>
+  <ul>
+    <li>只存放在本应用的私有存储空间，其他应用无法读取；</li>
+    <li>可在应用内"记录"页一键清空；</li>
+    <li>卸载应用后随应用数据一并删除。</li>
+  </ul>
+  <p>此外，本应用会在本地保存"已使用写卡次数"和"是否已解锁永久版"两个状态值，用于额度统计和购买恢复。</p>
+
+  <h2>五、权限说明</h2>
+  <table>
+    <tr><th>权限</th><th>用途</th><th>是否可拒绝</th></tr>
+    <tr>
+      <td><code>android.permission.NFC</code></td>
+      <td>读取和写入 NFC 标签内容，是本应用的核心功能</td>
+      <td>拒绝后应用无法使用</td>
+    </tr>
+    <tr>
+      <td><code>android.permission.INTERNET</code><br><code>android.permission.ACCESS_NETWORK_STATE</code></td>
+      <td>仅由华为应用内支付 SDK（HUAWEI IAP）使用，用于查询商品、发起购买、校验订单与恢复购买；不用于上传 NFC 数据或用户信息</td>
+      <td>拒绝后无法购买永久版，其余功能不受影响</td>
+    </tr>
+  </table>
+  <p>除上述三项外，本应用不申请存储、位置、相机、麦克风、通讯录、短信、电话等任何其他权限。</p>
+
+  <h2>六、支付</h2>
+  <p>本应用提供一次性买断的永久版解锁，通过<strong>华为应用内支付（HUAWEI IAP）</strong>完成。支付流程由华为终端有限公司提供并处理：</p>
+  <ul>
+    <li>我们不接触、不接收、不存储你的银行卡号、支付账号、账单地址等支付信息；</li>
+    <li>我们仅从华为侧获得"该华为账号是否已购买本商品"的结果，用于在本地解锁功能；</li>
+    <li>华为对支付信息的处理适用《华为应用内支付服务隐私声明》。</li>
+  </ul>
+
+  <h2>七、第三方共享</h2>
+  <p>除上述华为支付外，我们<strong>不向任何第三方共享、转让、公开披露</strong>你的任何信息。本应用不包含第三方广告或数据分析组件。</p>
+
+  <h2>八、未成年人保护</h2>
+  <p>本应用为通用工具类应用，不面向 14 周岁以下儿童单独提供服务。由于本应用不收集任何个人信息，不会产生针对未成年人的个人信息处理行为。</p>
+
+  <h2>九、你的权利</h2>
+  <p>由于本应用不收集个人信息，你无需申请查阅、更正、删除个人信息。对于保存在本机的读写记录与使用状态，你可以：</p>
+  <ul>
+    <li>在应用内"记录"页清空历史；</li>
+    <li>在系统设置中清除应用数据；</li>
+    <li>卸载应用，本地数据将全部删除。</li>
+  </ul>
+
+  <h2>十、政策更新</h2>
+  <p>如本政策发生变更，我们会在本页面更新版本号与生效日期，并在应用更新说明中提示。重大变更会以显著方式告知。</p>
+
+  <h2>十一、联系我们</h2>
+  <p>对本政策有任何疑问、意见或投诉，请联系：</p>
+  <ul>
+    <li>邮箱：【改：填你的邮箱】</li>
+    <li>我们会在收到后 15 个工作日内答复。</li>
+  </ul>
+
+  <footer>Megoo NFC 工具 · 本页面可离线保存，也可部署到任意 HTTPS 静态托管后作为商店隐私政策链接</footer>
+</div>
+</main>
+</body>
+</html>
